@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -13,9 +14,14 @@ body {
 
 
 .container{
-  max-width: 50%;
-  margin: auto;
+  margin-top: 10%;
+  width: 50%;
+  justify-self: center;
+  /* margin: auto; */
   padding: 0 1rem;
+  background-color: rgb(158, 158, 158);
+  border-radius: 10px;
+  padding: 2%;
 }
 
 h1{
@@ -35,30 +41,36 @@ input{
   outline: none;
   width: 40%;
   padding:0.5rem;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000000;
 }
 
 .add{
-  background-color: #000;
-  color: #fff;
+  background-color: #000000;
+  color: #ffffff;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
 }
 
+.add:hover{
+  background-color: rgb(12, 228, 12);
+  color: black;
+}
 .todo{
   position: relative;
   margin-top: 1rem;
-  background-color: #000;
+  background-color: #000000a0;
   color: #fff;
   padding: 1.5rem 3rem;
   border-radius: 10px;
 }
-
+.todo > .text{
+  padding-left: 0%;
+}
 .icons{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 10%;
+  right: 5%;
   display: flex;
   gap: 0.5rem;
 }
@@ -66,4 +78,23 @@ input{
 .icon{
   cursor: pointer;
   font-size: 20px;
+}
+
+#edit:hover{
+  color: yellow;
+}
+
+#delete:hover{
+  color: red;
+}
+
+.edit-msg{
+  display: hidden;
+}
+
+@media(max-width: 600px){
+  .container{
+    width:90%;
+    
+  }
 }
